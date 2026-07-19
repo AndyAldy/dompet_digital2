@@ -56,10 +56,12 @@ class TransactionForm extends StatelessWidget {
           ),
           
           const SizedBox(height: 16),
-          const Text('KETERANGAN', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.grey)),
+          const Text('KETERANGAN', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 5, 5, 5))),
           const SizedBox(height: 8),
           TextField(
             controller: descController,
+            // PERBAIKAN: Gunakan properti 'style' di sini untuk mewarnai teks input
+            style: const TextStyle(fontSize: 14, color: Colors.black), 
             decoration: InputDecoration(
               hintText: 'Contoh: Perlengkapan Bazaar...',
               prefixIcon: const Icon(Icons.description, size: 18),
@@ -68,11 +70,13 @@ class TransactionForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          const Text('JUMLAH NOMINAL (RUPIAH)', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.grey)),
+          const Text('JUMLAH NOMINAL (RUPIAH)', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 3, 3, 3))),
           const SizedBox(height: 8),
           TextField(
             controller: amountController,
             keyboardType: TextInputType.number,
+            // PERBAIKAN: Gunakan properti 'style' di sini untuk mewarnai teks input
+            style: const TextStyle(fontSize: 14, color: Colors.black),
             decoration: InputDecoration(
               hintText: 'Rp 0',
               prefixIcon: const Icon(Icons.attach_money, size: 18),
@@ -119,7 +123,7 @@ class TransactionForm extends StatelessWidget {
               children: [
                 const Icon(Icons.calendar_today, size: 18, color: Colors.grey),
                 const SizedBox(width: 8),
-                Text(formatter.format(selectedDate)),
+                Text(formatter.format(selectedDate), style: const TextStyle(color: Colors.black)), // Set text color to black
               ],
             ),
           ),
@@ -149,7 +153,7 @@ class TransactionForm extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
-                    child: Text('Debit', style: TextStyle(color: selectedType == 'debit' ? Colors.green : Colors.grey, fontWeight: FontWeight.bold)),
+                    child: Text('Debit', style: TextStyle(color: selectedType == 'debit' ? Colors.green : Colors.black54, fontWeight: FontWeight.bold)),
                   ),
                 ),
               ),
@@ -166,7 +170,7 @@ class TransactionForm extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
-                    child: Text('Kredit', style: TextStyle(color: selectedType == 'kredit' ? Colors.red : Colors.grey, fontWeight: FontWeight.bold)),
+                    child: Text('Kredit', style: TextStyle(color: selectedType == 'kredit' ? Colors.red : Colors.black54, fontWeight: FontWeight.bold)),
                   ),
                 ),
               ),

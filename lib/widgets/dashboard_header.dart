@@ -82,8 +82,8 @@ class DashboardHeader extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('PERIODE AKTIF', style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
-            Text(DateFormat('MMMM yyyy', 'id_ID').format(DateTime.now()), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+            const Text('PERIODE AKTIF', style: TextStyle(fontSize: 10, color: Color.fromARGB(255, 11, 11, 11), fontWeight: FontWeight.bold)),
+            Text(DateFormat('MMMM yyyy', 'id_ID').format(DateTime.now()), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Color.fromARGB(255, 0, 0, 0))),
           ],
         ),
         const SizedBox(width: 8),

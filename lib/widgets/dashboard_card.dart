@@ -46,7 +46,7 @@ class DashboardCard extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: AppColors.textPrimary,
+                color: Color.fromARGB(255, 0, 0, 0),
               ),
             ),
             if (subtitle != null) ...[
@@ -55,7 +55,7 @@ class DashboardCard extends StatelessWidget {
                 subtitle!,
                 style: const TextStyle(
                   fontSize: 12,
-                  color: AppColors.textSecondary,
+                  color: Color.fromARGB(179, 1, 1, 1),
                 ),
               ),
             ],
